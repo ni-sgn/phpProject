@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>0(layout)0</title>
+		<link rel="stylesheet" href="../styles/style.css" />
+		<script src="../scripts/jquery.min.js"></script>
+		<script src="../scripts/parser.js"></script>
+		<script src="../scripts/interactive.js"></script>
+		
+	</head>
+
+<body>
+	<div id="control">
+
+	<div class="console">
+		<textarea id="cli" placeholder="console://" onkeypress="enter_command(event)"></textarea>
+	</div><!--End of console-->
+
+
+
+	<nav id="taskbar">
+		<div class="taskbar_item" onclick="window.location = '../home.php'">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+  <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+</svg>
+		</div>
+		<div class="taskbar_item" onclick="kliku2()">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+  <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+</svg>
+		</div>
+		<div class="extended-content">
+			<ul>
+				<li class="active"><a href="layout.html">Layout</a></li>
+				<li><a href="styling.html">Styiling</a></li>
+			</ul>
+		</div>
+
+
+		<div class="taskbar_item" onclick="kliku()">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354L4.793 6.5 3.146 4.854a.5.5 0 1 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708z"/>
+</svg>
+		</div>
+		
+	</nav> <!--End of taskbar-->
+	</div> <!--End of control-->
+
+
+	
+
+	<div id="wrapper">
+	
+	<div id="contentsWI">
+
+	<div class="contentWI">
+	<div class="img_wrapper">
+	<img src="../media/00.svg" alt="directions" />
+	</div> <!---End img_wrapper-->
+	<p class="info">Parent element = Flex container</p>
+	<p class="info">display: flex; enables flex content for all it's direct children</p>
+	<p class="info">The flex layout is based on "flex-flow directions</p>
+	</div><!-- End of contentWI-->
+
+	<div class="contentWI">	
+	<div class="img_wrapper">
+	<img src="../media/margin.png" alt="margins" />
+	</div> <!--End of img_wrapper-->
+	<p class="info"> padding resizes the box margin only reallocates</p>
+	<p class="info">Basically how margin works is that it calculates the distance between the current container and the closest conainer and if the distance between current.y - (closest.y + closest.height) is less than margin.value then current.y + delta</p>
+	</div> <!--End of contentWI-->
+
+	</div> <!--End of contentsWI-->
+	
+	<div id="contents">
+		
+	<div class="content">
+	<input type="text" placeholder="flex-direction: ;" readonly> <span>applied on container</span>
+	<p class="info">Defines the direction of main axis</p>
+	<ul>
+		<li>row</li>
+		<li>row-reverse</li>
+		<li>column</li>
+		<li>column-reverse</li>
+	</ul>
+	</div><!-- End of content -->
+	<div class="content">
+	<input type="text" placeholder="flex-wrap: ;" readonly><span>applied on container</span>
+	<p class="info"> Some description! </p>
+	<ul>
+		<li>nowrap</li>
+	 	<li>wrap</li> 
+		<li>wrap-reverse</li>
+	</ul>
+	</div><!-- End of content -->
+	<div class="content">
+	<input type="text" placeholder="justify-content: ;" readonly> <span>applied on container</span>
+	<p class="info"> alignment along the main axis! </p>
+	<ul>
+		<li>flex-start</li>
+		<li>flex-end</li>
+		<li>center</li>
+		<li>space-between</li>
+		<li>space-arount</li>	
+		<li>space-evenly</li>
+	</ul>
+	</div><!-- End of content -->
+	<div class="content">
+	<input type="text" placeholder="align-items: ;" readonly> <span>applied on container</span>
+	<p class="info"> Justify-content for cross axis! </p>
+	<ul>
+		<li>flex-start</li>
+		<li>flex-end</li>
+		<li>center</li>
+		<li>stretch</li>
+		<li>baseline</li>	
+	</ul>
+	</div><!-- End of content -->
+	<div class="content">
+	<input type="text" placeholder="align-content: ;" readonly> <span>applied on container</span>
+	<p class="info"> aligns flex container's lines!</p>
+	<ul>
+		<li>flex-start</li>
+		<li>flex-end</li>
+		<li>center</li>
+		<li>stretch</li>
+		<li>space-between</li>	
+		<li>space-arount</li>
+	</ul>
+	</div><!-- End of content -->
+	<div class="content">
+	<input type="text" placeholder="order: ;" readonly> <span>applied on item</span>
+	<p class="info"> order in which item appears! </p>
+	<ul>
+		<li>uniteless number</li>
+	</ul>
+	</div><!-- End of content -->
+	<div class="content">
+	<input type="text" placeholder="flex-grow: ;" readonly> <span>applied on item</span>
+	<p class="info"> ability for flex item to grow! Default  1 </p>
+	<ul>
+		<li>uniteless number</li>
+	</ul>
+	</div><!-- End of content-->
+	<div class="content">
+	<input type="text" placeholder="flex-shrink: ;" readonly> <span>applied on item</span>
+	<p class="info"> ability for flex item to shrink! Default  1 </p>
+	<ul>
+		<li>uniteless number</li>
+	</ul>
+	</div><!-- End of content-->
+	<div class="content">
+	<input type="text" placeholder="flex-basis: ;" readonly> <span>applied on item</span>
+	<p class="info"> Weird Weird! Default  auto </p>
+	<ul>
+		<li>auto</li>
+		<li>size</li>
+	</ul>
+	</div><!-- End of content-->
+	<div class="content">
+	<input type="text" placeholder="align-self: ;" readonly> <span>applied on item</span>
+	<p class="info"> override default alignment for individual element </p>
+	<ul>
+		<li>auto</li>
+		<li>flex-start</li>
+		<li>flex-end</li>
+		<li>center</li>
+		<li>stretch</li>
+		<li>baseline</li>
+	</ul>
+	</div><!-- End of content-->
+
+	</div><!-- End of contents -->
+
+	</div> <!-- End of wrapper -->
+</body>
+
+</html>
+

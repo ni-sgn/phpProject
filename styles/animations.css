@@ -1,0 +1,104 @@
+body {
+  background-color: #262626;
+}
+
+/*styling ghost and it's shadow*/
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -64.5px;
+  margin-top: -85.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.ghost {
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+.shadowFrame {
+  width: 130px;
+  margin-top: 15px;
+}
+.shadow {
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center;
+  ellipse {
+    transform-origin: center center;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 60%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+
+/*styling proceed button*/
+
+
+.wrapper{
+	border-top:5px solid #c3073f; 
+	border-bottom:5px solid #c3073f;
+	border-radius: 7px;
+}
+
+a{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #ffff9b;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
+}
+
+

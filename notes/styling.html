@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>(styles)0w0(styles)</title>
+		<link rel="stylesheet" href="../styles/style.css" />
+		<script src="../scripts/jquery.min.js"></script>
+		<script src="../scripts/parser.js"></script>
+		<script src="../scripts/interactive.js"></script>
+
+	</head>
+<body>
+
+	<!--Control System-->
+		<div id="control">
+
+	<div class="console">
+		<textarea id="cli" placeholder="console://" onkeypress="enter_command(event)"></textarea>
+	</div><!--End of console-->
+
+
+
+	<nav id="taskbar">
+		<div class="taskbar_item" onclick="window.location = '../home.php'">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+  <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+</svg>
+		</div>
+		<div class="taskbar_item extendable" onclick="kliku2()">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+  <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+</svg>
+		</div>
+		<div class="extended-content">
+			<ul>
+				<li><a href="layout.html">Layout</a></li>
+				<li class="active"><a href="styling.html">Styiling</a></li>
+			</ul>
+		</div>
+
+
+		<div class="taskbar_item" onclick="kliku()">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354L4.793 6.5 3.146 4.854a.5.5 0 1 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708z"/>
+</svg>
+		</div>
+		
+	</nav> <!--End of taskbar-->
+	</div> <!--End of control-->
+
+
+
+		<div id="wrapper">
+	
+		<div id="fonts">
+			<div class="flex_item"><!--Families-->
+		
+		<table>
+			<tr class="theader">
+				<th>Generic Family</th>
+				<th>Font Family</th>
+			</tr>
+			<tr>
+				<td>Serif</td>
+				<td><ul>
+						<li style="font-family:times, serif;">"Times New Roman"</li>
+						<li style="font-family:georgia, serif;">Georgia</li>
+						<li style="font-family:'Palatino Linotype', serif;">"Palatino Linotype"</li>
+						<li style="font-family:'Book Antiqua', serif;">"Book Antiqua"</li>
+						<li style="font-family: Palatino, serif;">Palatino</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Sans-serif</td>
+				<td><ul>
+						<li style="font-family: arial, sans-serif;">Arial</li>
+						<li style="font-family: verdana, sans-serif;">Verdana</li>
+						<li style="font-family: helvetica, sans-serif;">Helvetica</li>
+						<li style="font-family: 'arial black', sans-serif;">"Arial Black"</li>
+						<li style="font-family: gadget, sans-serif;">Gadget</li>
+						<li style="font-family: 'Comic Sans MS', sans-serif;">"Comic Sans MS"</li>
+						<li style="font-family:cursive, sans-serif;">Cursive</li>
+						<li style="font-family:impact, sans-serif;">Impact</li>
+						<li style="font-family:charchoal, sans-serif;">Charcoal</li>
+						<li style="font-family:'Lucida Sans Unicode', sans-serif;">"Lucida Sans Unicode"</li>
+						<li style="font-family:'Lucida Grande', sans-serif;">"Lucida Grande"</li>
+						<li style="font-family:tahoma, sans-serif;">Tahoma</li>
+						<li style="font-family:geneva, sans-serif;">Geneva</li>
+						<li style="font-family:'Trebuchet MS', sans-serif;">"Trebuchet MS"</li>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Monospace</td>	
+				<td><ul>
+						<li style="font-family:'Courier New', monospace;">"Courier New"</li>
+						<li style="font-family: courier, monospace;">Courier</li>
+						<li style="font-family:'Lucida Console', monospace;">"Lucida Console"</li>
+						<li style="font-family: monaco, monospace;">Monaco</li>
+				</td>
+			</tr>
+		</table><!--End of table-->
+		</div><!--End of families-->
+		<div class="flex_item">
+		<table class="table_interactive"> 
+			<tr class="theader">
+			<th>style</th>
+			<th>value</th>
+			</div>
+			<tr>
+				<td><input type="text" placeholder="font-style:"</td>
+				<td><ul>
+						<li style="font-style: normal;">normal</li>
+						<li style="font-style: italic;">italic</li>
+						<li style="font-style: oblique;">oblique</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="font-weight:"</td>
+				<td><ul>
+						<li style="font-weight: 100;">300</li>
+						<li style="font-weight: normal;">normal</li>
+						<li style="font-weight: bold;">bold</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="font-variant:"</td>
+				<td><ul>
+						<li style="font-variant: normal;">normal</li>
+						<li style="font-variant: small-caps;">normal</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="font-stretch:"</td>
+				<td><ul>
+						<li style="font-stretch: ultra-condensed;">ultra-condensed</li>
+						<li style="font-stretch: extra-condensed;">extra-condensed</li>
+						<li style="font-stretch: condensed;">condensed</li>
+						<li style="font-stretch: semi-condensed;">semi-condensed</li>
+						<li style="font-stretch: normal;">normal</li>
+						<li style="font-stretch: semi-expaned;">semi-expanded</li>
+						<li style="font-stretch: expanded;">expanded</li>
+						<li style="font-stretch: extra-expanded;">extra-expanded</li>
+						<li style="font-stretch: ultra-expanded;">ultra-expanded</li>
+			
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="text-decoration:"</td>
+				<td><ul>
+						<li style="text-decoration: overline;">overline</li>
+						<li style="text-decoration: line-through;">line-through</li>
+						<li style="text-decoration: underline;">underline</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="text-transform:"/></td>
+				<td><ul>
+						<li style="text-transform: uppercase;">uppercase</li>
+						<li style="text-transform: lowercase;">lowercase</li>
+						<li style="text-transform: capitalize;">capitalize</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="other things"</td>
+				<td><ul>
+						<li style="text-indent: 3px;">text-indent</li>
+						<li style="letter-spacing: 3px;">letter-spacing</li>
+						<li style="line-height: 1.8;">line-height</li>
+						<li style="word-spacing: 10px;">word-spacing spacing</li>
+						<li style="text-shadow: 2px 2px red;">text-shadow: 2px 2px red</li>
+				</td>
+					</ul>
+			</tr>
+		</table>
+		</div> <!--End of styles-->
+
+		</div><!--End of fonts-->
+		
+		<div id="colors">
+		<h2>Colors</h2>
+		<div name="hex">
+		<p style="background-color:#262626;">#262626</p>
+		<p style="background-color:#c3073f;">#c3073f</p>
+		<p style="background-color:#130f40;">#130f40</p>
+		<p style="background-color:#c3253d;">#c3253d</p>
+		<p style="background-color:#ffff9b;">#ffff9b</p>
+		</div><!--End of hex-->
+		</div><!--End of colors-->
+
+		</div> <!-- End of Wrapper-->
+	</body>
+</html>

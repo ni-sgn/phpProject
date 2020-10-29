@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>0(contact)0</title>
+		<link rel="stylesheet" href="styles/style.css" />
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/parser.js"></script>
+		<script src="scripts/interactive.js"></script>
+		
+	</head>
+
+<body>
+	<!--Control System-->
+		<div id="control">
+
+	<div class="console">
+		<textarea id="cli" placeholder="console://" onkeypress="enter_command(event)"></textarea>
+	</div><!--End of console-->
+
+
+
+	<nav id="taskbar">
+		<div class="taskbar_item" onclick="window.location = 'home.php'">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+  <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+</svg>
+		</div>
+		<div class="taskbar_item extendable" onclick="kliku2()">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"/>
+  <path fill-rule="evenodd" d="M2.125 8.567l-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l.418-.785-.419.785-5.169-2.756z"/>
+</svg>
+		</div>
+		<div class="extended-content">
+			<ul>
+				<li><a href="notes/layout.html">Layout</a></li>
+				<li><a href="notes/styling.html">Styiling</a></li>
+			</ul>
+		</div>
+
+
+		<div class="taskbar_item" onclick="kliku()">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354L4.793 6.5 3.146 4.854a.5.5 0 1 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708z"/>
+</svg>
+		</div>
+		<div class="taskbar_item"  onclick="window.location = '#'">
+			<svg class="icon" width="1em" height="1em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"/>
+</svg>
+		</div>
+	</nav> <!--End of taskbar-->
+	
+	</div> <!--End of control-->
+	
+
+	<div id="wrapper">
+
+	 <form action="">
+    <label for="fname">Sender</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your email..">
+
+    <label for="lname">Reciever</label>
+    <input type="text" id="lname" name="lastname" placeholder="ni.saganeli@gmail.com" readonly>
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Goergia</option>
+      <option value="canada">Narnia</option>
+      <option value="usa">Neverlandia</option>
+    </select>
+
+
+    <label for="subject">Subject</label>
+    <textarea  name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>	
+
+		</div> 
+
+
+</body>
+</html>
